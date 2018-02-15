@@ -1,0 +1,31 @@
+{
+  "name": "node-synonyms",
+  "version": "1.0.0",
+  "description": "Chinese Synonyms for Natural Language Processing and Understanding.",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Samurais/node-synonyms.git"
+  },
+  "keywords": [
+    "synonyms",
+    "nlp"
+  ],
+  "author": "Hai Liang Wang <hailiang.hl.wang@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Samurais/node-synonyms/issues"
+  },
+  "homepage": "https://github.com/Samurais/node-synonyms#readme",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0"
+  },
+  "engines" : { "node" : ">=7.9.0" }
+}
