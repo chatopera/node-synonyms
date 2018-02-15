@@ -106,6 +106,13 @@ synonyms.compare(sen1, sen2)
 
 相似度是在置信区间[0~1]的float值，越接近于1越相似。
 
+
+# Contribute
+```
+admin/rebuilt.sh # 重新编译C++ Addon
+admin/test.sh # 单元测试
+```
+
 # Word2vec
 word2vec是用来训练词向量模型的工具，为了方便，将word2vec也放在代码库中。编译和使用word2vec：
 ```

@@ -1,6 +1,6 @@
 {
   "name": "node-synonyms",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Chinese Synonyms for Natural Language Processing and Understanding.",
   "main": "app/index.js",
   "scripts": {
@@ -27,11 +27,9 @@
     "compute-cosine-similarity": "^1.0.0",
     "debug": "^3.1.0",
     "fast-levenshtein": "^2.0.6",
-    "install": "^0.10.4",
     "lodash": "^4.17.5",
     "nan": "^2.8.0",
     "nodejieba": "^2.2.5",
-    "npm": "^5.6.0",
     "q": "^1.5.1",
     "readlineq": "^2.0.1"
   },
