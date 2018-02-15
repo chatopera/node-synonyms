@@ -49,31 +49,26 @@ std::string trim(std::string str) {
     return right_trim(left_trim(str));
 }
 
-/**
- * return as string
- * @param v      [description]
- * @param result [description]
- */
-inline void to_string(const std::vector<float> v, std::string& result){
-    std::stringstream ss;
-    ss << "[";
-    std::vector<float>::const_iterator it = v.begin();
-    std::vector<float>::const_iterator last = (v.end() - 1);
-    for(; it != v.end(); it++){
-        ss << *it;
-        if(it != last){
-            ss << ",";
-        } 
-    }
-    ss << "]";
-    result = ss.str();
-}
-
-template <typename T>
-std::string to_string(const vector<T>& v0) {
+std::string to_string(const vector<float>& v0) {
     std::stringstream s;
     s << "[ ";
-    for (const auto& f : v0) s << f << " ";
+    for (const auto& f : v0) {
+        s << f;
+        if (f != v0.back()) s << ",";
+    }
+    s << "]";
+    return s.str();
+}
+
+std::string to_string(const vector<std::string>& v0) {
+    std::stringstream s;
+    s << "[ ";
+    for (const auto& f : v0) {
+        s << "\"";
+        s << f;
+        s << "\"";
+        if (f != v0.back()) s << ",";
+    }
     s << "]";
     return s.str();
 }

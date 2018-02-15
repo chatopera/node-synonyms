@@ -1,4 +1,4 @@
-/* Copyright (C) 2018 Hai Liang Wang - All Rights Reserved
+/* Copyright (C) 2018 Hai Liang Wang<hailiang.hl.wang@gmail.com> - All Rights Reserved
  * You may use, distribute and modify this code under the
  * terms of the GPL 3.0 license, which unfortunately won't be
  * written for another century.
