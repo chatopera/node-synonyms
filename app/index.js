@@ -15,19 +15,23 @@
 const argv = process.argv;
 const curdir = __dirname;
 const debug = require("debug")("synonyms:index")
-const SYN_MODEL_W2V_PATH = "SYN_MODEL_W2V_PATH" in process.env?process.env["SYN_MODEL_W2V_PATH"]:"";
-const SYN_MODEL_NEARBY_PATH = "SYN_MODEL_NEARBY_PATH" in process.env?process.env["SYN_MODEL_NEARBY_PATH"]:"";
+const tokenizer = require("./common/tokenizer");
+const Q = require("q");
 
 function Synonyms(){
     this.init();
 }
+
+// mount two inferfaces from tokenizer
+Synonyms.prototype.seg = tokenizer.seg;
+Synonyms.prototype.tag = tokenizer.tag;
 
 Synonyms.prototype.nearby = function(word){
 
 }
 
 Synonyms.prototype.init = function(){
-    debug("init");
+    
 }
 
 Synonyms.prototype.compare = function(sen1, sen2){
