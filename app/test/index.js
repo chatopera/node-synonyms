@@ -1,5 +1,13 @@
+const test = require("ava");
 /**
  * Test
  */
-const test = require("ava");
-const debug = require("")
+const curdir = __dirname;
+const path = require("path");
+const debug = require("debug")("synonyms:test");
+const synonyms = require(path.resolve(curdir, ".."));
+
+test("Synonyms#init", async (t)=>{
+    debug("Synonyms#init")
+    t.pass();
+})
