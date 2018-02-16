@@ -29,7 +29,7 @@
     "fast-levenshtein": "^2.0.6",
     "lodash": "^4.17.5",
     "nan": "^2.8.0",
-    "node-word2vec-reader": "^1.0.2",
+    "node-word2vec-reader": "^1.0.3",
     "nodejieba": "^2.2.5",
     "q": "^1.5.1",
     "readlineq": "^2.0.1"
