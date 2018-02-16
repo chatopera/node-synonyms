@@ -25,7 +25,7 @@
                       "include_dirs": [
                         "<!(node -e \"require('nan')\")"
                       ],
-                      'cflags_cc': [ '-fno-exceptions', '-std=c++14', '-std=gnu++14'],
+                      'cflags_cc': [ '-fno-exceptions', '-std=c++14'],
                       "libraries": [
                       ]
                   }]

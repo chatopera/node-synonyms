@@ -9,15 +9,27 @@ os:
   - linux
   - osx
 
+sudo: required
+
 cache:
   directories:
     - node_modules
 
 before_install:
   - if [ "$TRAVIS_OS_NAME" == 'osx' ]; then brew install shellcheck; fi
+  
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-5
+    - g++-5
 
 script:
   - echo $TRAVIS_OS_NAME
+  - sudo unlink /usr/bin/gcc && sudo ln -s /usr/bin/gcc-5 /usr/bin/gcc
+  - gcc --version
   - node --version
   - npm --version
   - ./admin/test.sh

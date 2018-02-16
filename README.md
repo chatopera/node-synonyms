@@ -15,6 +15,7 @@ npm install node-synonyms
 
 本项目为 [Synonyms](https://github.com/huyingxi/Synonyms/) 的 Node.js 版工具包，稳定版本为 v1，在*Mac OSX*及*Linux*下完成测试。**为了保证性能，使用Node.js [C ++ Addon模块](https://github.com/Samurais/node-synonyms/tree/master/app/word2vec)管理词表和加载模型。** 目前打包后，npm module有47MB，是由于词表文件很大，下载时需要耐心。
 
+![](./docs/demo.gif)
 
 支持使用环境变量配置：
 
