@@ -1,4 +1,18 @@
 # Synonyms
+[![node version][node-image]][node-url]
+[![build status][travis-image]][travis-url]
+[![codecov.io][codecov-image]][codecov-url]
+[![David deps][david-image]][david-url]
+
+[travis-image]: https://travis-ci.org/Samurais/node-synonyms.svg?branch=master
+[travis-url]: https://travis-ci.org/Samurais/node-synonyms
+[codecov-image]: https://img.shields.io/codecov/c/github/Samurais/node-synonyms/master.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/Samurais/node-synonyms?branch=master
+[node-image]: https://img.shields.io/badge/node.js-%3E=_7-green.svg?style=flat-square
+[node-url]: http://nodejs.org/download/
+[david-image]: https://david-dm.org/Samurais/node-synonyms/status.svg
+[david-url]: https://david-dm.org/Samurais/node-synonyms
+
 Chinese Synonyms for Natural Language Processing and Understanding.
 
 最好的中文近义词工具包。

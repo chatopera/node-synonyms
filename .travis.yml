@@ -32,6 +32,8 @@ script:
 
 after_success:
   - npm run coverage
+  - npm i codecov
+  - codecov
 
 stages:
   - test
