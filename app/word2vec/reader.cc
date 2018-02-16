@@ -270,9 +270,10 @@ void Reader::FindClosestWords(
     }
 
     // sort distances list by distance
-    std::sort(dists.begin(), dists.end(), [](auto& left, auto& right) {
-      return left.second > right.second;
-    });
+    stable_sort(dists.rbegin(), dists.rend(),
+                [](decltype(*dists.cbegin()) lhs, decltype(lhs) rhs) {
+                  return lhs.second > rhs.second;
+                });
 
     // return top_k results
     vector<pair<string, float> > top_dists(dists.begin(),

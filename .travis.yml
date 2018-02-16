@@ -1,13 +1,10 @@
 language: node_js
 node_js:
-  - "4"
   - "7"
-  - "8"
-  - "9"
+dist: trusty
 
 os:
   - linux
-  - osx
 
 sudo: required
 
@@ -15,16 +12,15 @@ cache:
   directories:
     - node_modules
 
-before_install:
-  - if [ "$TRAVIS_OS_NAME" == 'osx' ]; then brew install shellcheck; fi
-  
 addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    packages:
-    - gcc-5
-    - g++-5
+    apt:
+        sources:
+            - llvm-toolchain-precise
+            - ubuntu-toolchain-r-test
+        packages:
+            - clang-3.7
+            - g++-5
+            - gcc-5
 
 script:
   - echo $TRAVIS_OS_NAME
