@@ -6,7 +6,8 @@
   "scripts": {
     "test": "DEBUG=synonyms* ava app/test",
     "dev": "DEBUG=synonyms* ava --watch app/test",
-    "install": "node-gyp rebuild"
+    "install": "node-gyp rebuild",
+    "coverage": "node_modules/nyc/bin/nyc.js --reporter=lcov --reporter=text-lcov npm test"
   },
   "repository": {
     "type": "git",
@@ -34,7 +35,8 @@
     "readlineq": "^2.0.1"
   },
   "devDependencies": {
-    "ava": "^0.25.0"
+    "ava": "^0.25.0",
+    "nyc": "^11.4.1"
   },
   "engines": {
     "node": ">=7.9.0"

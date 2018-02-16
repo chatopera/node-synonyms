@@ -1,0 +1,32 @@
+language: node_js
+node_js:
+  - "4"
+  - "7"
+  - "8"
+  - "9"
+
+os:
+  - linux
+  - osx
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - if [ "$TRAVIS_OS_NAME" == 'osx' ]; then brew install shellcheck; fi
+
+script:
+  - echo $TRAVIS_OS_NAME
+  - node --version
+  - npm --version
+  - ./admin/test.sh
+
+after_success:
+  - npm run coverage
+
+stages:
+  - test
+  - pack
+  - name: deploy
+    if: branch =~ ^(master|v\d+\.\d+)
