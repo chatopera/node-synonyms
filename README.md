@@ -13,6 +13,8 @@
 [david-image]: https://david-dm.org/Samurais/node-synonyms/status.svg
 [david-url]: https://david-dm.org/Samurais/node-synonyms
 
+[![NPM](https://nodei.co/npm/node-synonyms.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-synonyms/)
+
 Chinese Synonyms for Natural Language Processing and Understanding.
 
 最好的中文近义词工具包。
