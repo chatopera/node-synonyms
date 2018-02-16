@@ -27,7 +27,7 @@ Chinese Synonyms for Natural Language Processing and Understanding.
 npm install node-synonyms
 ```
 
-本项目为 [Synonyms](https://github.com/huyingxi/Synonyms/) 的 Node.js 版工具包，稳定版本为 v1，在*Mac OSX*及*Linux*下完成测试。**为了保证性能，使用Node.js [C ++ Addon模块](https://github.com/Samurais/node-synonyms/tree/master/app/word2vec)管理词表和加载模型。** 目前打包后，npm module有47MB，是由于词表文件很大，下载时需要耐心。
+本项目为 [Synonyms](https://github.com/huyingxi/Synonyms/) 的 Node.js 版工具包，稳定版本为 v1，在*Mac OSX*及*Linux*下完成测试。目前打包后，npm module有47MB，是由于词表文件很大，下载时需要耐心。
 
 ![](./docs/demo.gif)
 
@@ -52,7 +52,10 @@ var synonyms = require("node-synonyms") # 使用上述环境变量做定制化
 分词接口
 ```
 let sen1 = "移动互联网";
-let words = await synonyms.seg(sen1, true, true);
+synonyms.seg(sen1, true, true)
+    .then(function(words){
+        // do your magic
+        });
 ```
 stopwords(Boolean)是否保留停用词，punct(Boolean)是否保留标点符号。
 
@@ -121,23 +124,10 @@ synonyms.compare(sen1, sen2)
 
 相似度是在置信区间[0~1]的float值，越接近于1越相似。
 
-
 # Contribute
 ```
-admin/rebuilt.sh # 重新编译C++ Addon
 admin/test.sh # 单元测试
 ```
-
-# Word2vec
-word2vec是用来训练词向量模型的工具，为了方便，将word2vec也放在代码库中。编译和使用word2vec：
-```
-cd app/word2vec/google
-make clean
-make
-./word2vec
-```
-
-关于Word2vec更多信息，参考 [word2vec/google/README](app/word2vec/google/README.txt)。
 
 # Give credits to
 
@@ -147,7 +137,7 @@ make
 
 [compute-cosine-distance](https://github.com/compute-io/cosine-distance)
 
-[ofxMSAWord2Vec](https://github.com/memo/ofxMSAWord2Vec)
+[node-word2vec-reader](https://www.npmjs.com/package/node-word2vec-reader)
 
 # Statement
 Synonyms发布证书 GPL3.0。数据和程序可用于研究和商业产品，必须注明引用和地址，比如发布的任何媒体、期刊、杂志或博客等内容。

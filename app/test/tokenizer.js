@@ -3,7 +3,7 @@ const test = require("ava");
  * Test Tokenizer
  */
 const debug = require("debug")("synonyms:test:tokenzier");
-const tokenizer = require("../common/tokenizer");
+const tokenizer = require("../tokenizer");
 
 test("Synonyms:Tokenizer#cut", async (t)=> {
     debug("Synonyms:Tokenizer#cut");
